@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Data Base</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <h1 class="text-center">Find your favorite teams and players</h1>
+    <!-- search filed -->
+    <section class="my-5 d-flex justify-content-center">
+      <div class="w-50">
+        <input type="text" class="form-control" id="search-club" />
+      </div>
+      <div>
+        <button onclick="loadData()" type="submit" class="btn btn-danger">
+          Find Club
+        </button>
+      </div>
+    </section>
+    <!-- end of search filed -->
+    <!-- individual team details -->
+    <div
+      id="team-detail"
+      class="row my-5 row-cols-1 row-cols-md-1 g-4 container mx-auto"
+    ></div>
+    <!-- end of individual team details -->
+    <!-- club card section  -->
+    <div id="parent" class="row row-cols-1 row-cols-md-1 g-4">
+      <div id="spinner"></div>
+    </div>
+    <!-- end of club card section  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sportsDB.js"></script>
+  </body>
+</html>
